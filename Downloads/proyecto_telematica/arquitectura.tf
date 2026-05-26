@@ -157,7 +157,7 @@ resource "aws_instance" "telematica_server" {
     # Clonar el repositorio del proyecto
     # IMPORTANTE: reemplazar por la URL de tu repositorio en GitHub
     cd /home/ec2-user
-    git clone https://github.com/TU_USUARIO/proyecto-telematica.git app
+    git clone https://github.com/nicovvanegas-beep/proyecto-telematica.git app
     cd app
 
     # Levantar la aplicación con Docker Compose
