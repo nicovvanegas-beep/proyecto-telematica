@@ -79,7 +79,7 @@ data "aws_ami" "amazon_linux" {
 # Define qué tráfico de red entra y sale de la instancia EC2
 resource "aws_security_group" "telematica_sg" {
   name        = "telematica-security-group"
-  description = "Security group para la app de telemática"
+  description = "Security group para la app de telematica"
 
   # Puerto 22 — SSH (para administrar el servidor)
   ingress {
