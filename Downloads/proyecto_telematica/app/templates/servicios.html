@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Servicios — TelematicaApp{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Nuestros Servicios</h1>
+        <p>Soluciones telemáticas basadas en contenedores y cloud</p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <div class="container">
+        <div class="service-item">
+            <h3>🐳 Contenerización con Docker</h3>
+            <p>Empaquetamos tu aplicación en un contenedor Docker con todas sus dependencias. 
+               Garantizamos que funcione igual en cualquier servidor.</p>
+            <ul>
+                <li>Dockerfile optimizado para producción</li>
+                <li>Imágenes livianas basadas en Alpine/Slim</li>
+                <li>Docker Compose para múltiples servicios</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h3>☁️ Despliegue en AWS</h3>
+            <p>Aprovisionamos y configuramos tu infraestructura en Amazon Web Services 
+               completamente mediante código Terraform.</p>
+            <ul>
+                <li>EC2 con Security Groups configurados</li>
+                <li>Nginx como reverse proxy</li>
+                <li>Acceso SSH seguro con claves</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h3>🔁 Desarrollo Continuo</h3>
+            <p>Tu código vive en un repositorio Git con historial completo. 
+               Cualquier cambio se despliega de forma controlada y trazable.</p>
+            <ul>
+                <li>Control de versiones con Git/GitHub</li>
+                <li>README con instrucciones detalladas</li>
+                <li>Scripts de despliegue automatizados</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h3>🔗 API REST</h3>
+            <p>Endpoints para integración con otros sistemas. 
+               Documentados, estables y en formato JSON estándar.</p>
+            <ul>
+                <li>GET /api/status — salud del servicio</li>
+                <li>GET /api/mensajes — datos almacenados</li>
+                <li>Base de datos SQLite persistente</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

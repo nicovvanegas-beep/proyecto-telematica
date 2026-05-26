@@ -1,0 +1,7 @@
+# requirements.txt — Dependencias de Python
+# Proyecto Final Telemática
+#
+# Instalar con: pip install -r requirements.txt
+
+flask==3.0.3          # Framework web principal
+gunicorn==22.0.0      # Servidor WSGI para producción (reemplaza el servidor de desarrollo)

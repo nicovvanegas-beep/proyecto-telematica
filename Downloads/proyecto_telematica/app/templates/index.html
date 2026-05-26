@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Inicio — TelematicaApp{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Servicios Web Telemáticos</h1>
+        <p class="hero-sub">Aplicación desplegada en contenedores Docker sobre AWS EC2.<br>
+           Infraestructura como código con Terraform.</p>
+        <a href="/servicios" class="btn btn-primary">Ver Servicios</a>
+        <a href="/contacto" class="btn btn-outline">Contáctanos</a>
+    </div>
+</section>
+
+<!-- Tarjetas de características -->
+<section class="features">
+    <div class="container">
+        <h2>¿Qué ofrecemos?</h2>
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🐳</div>
+                <h3>Despliegue con Docker</h3>
+                <p>Contenedores reproducibles. El mismo entorno en desarrollo y producción. 
+                   Sin sorpresas al escalar.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">☁️</div>
+                <h3>Infraestructura en AWS</h3>
+                <p>Servidores EC2 aprovisionados automáticamente con Terraform. 
+                   Infraestructura como código, versionada y reproducible.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔗</div>
+                <h3>API REST</h3>
+                <p>Endpoints documentados para integración con otros sistemas. 
+                   Respuestas en JSON, listas para consumir.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h3>CI/CD Continuo</h3>
+                <p>Repositorio en GitHub con historial de cambios. 
+                   Despliegue reproducible desde un solo comando.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Estado del servicio (en tiempo real via API) -->
+<section class="status-section">
+    <div class="container">
+        <h2>Estado del servicio</h2>
+        <div id="status-box" class="status-box">
+            <p>Cargando estado...</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

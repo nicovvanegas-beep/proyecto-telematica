@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Contacto — TelematicaApp{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Contacto</h1>
+        <p>Envíanos un mensaje y te respondemos pronto</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+
+            <!-- Formulario de contacto -->
+            <div class="contact-form">
+                <h2>Enviar mensaje</h2>
+
+                <!-- Mensaje de éxito -->
+                {% if exito %}
+                <div class="alert alert-success">{{ exito }}</div>
+                {% endif %}
+
+                <!-- Mensaje de error -->
+                {% if error %}
+                <div class="alert alert-error">{{ error }}</div>
+                {% endif %}
+
+                <form method="POST" action="/contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" 
+                               placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" 
+                                  placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <h2>Información</h2>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <strong>Ubicación</strong>
+                        <p>Colombia</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🌐</span>
+                    <div>
+                        <strong>Tecnologías</strong>
+                        <p>Python, Flask, Docker, AWS, Terraform</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📡</span>
+                    <div>
+                        <strong>API disponible</strong>
+                        <p><a href="/api/status" target="_blank">/api/status</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

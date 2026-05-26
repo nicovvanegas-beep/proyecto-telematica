@@ -1,0 +1,40 @@
+# ============================================================
+# .gitignore — Archivos que NO se suben al repositorio
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.env
+venv/
+env/
+
+# Base de datos local (no subir datos de desarrollo)
+app/data/
+*.db
+*.sqlite3
+
+# Terraform — estado e información sensible
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars       # puede contener access keys de AWS
+
+# Claves SSH
+*.pem
+*.key
+
+# Docker
+.dockerignore
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
